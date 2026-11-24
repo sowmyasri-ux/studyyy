@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101713">
+  <meta name="description" content="STUDENT OS — your academic life, in one place. A fictional student dashboard demonstration.">
+  <title>STUDENT OS — Academic Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="app-shell">
+    <button class="sidebar-scrim" type="button" aria-label="Close navigation" tabindex="-1"></button>
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="STUDENT OS home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3 32 11v14l-14 8L4 25V11L18 3Z"/><path d="M18 9 26.5 14v8L18 27l-8.5-5v-8L18 9Z"/><path d="M18 9v18M10 14l16 8M26 14l-16 8"/></svg></span>
+        <span class="brand-type"><strong>STUDENT <em>OS</em></strong><small>ACADEMIC WORKSPACE</small></span>
+      </a>
+      <div class="side-rule"></div>
+      <nav class="side-nav">
+        <p class="nav-caption">Workspace</p>
+        <a class="nav-link active" href="#overview" aria-current="page"><span class="nav-icon">⌂</span><span>Overview</span></a>
+        <a class="nav-link" href="#courses"><span class="nav-icon">▤</span><span>My Courses</span></a>
+        <a class="nav-link" href="#timetable"><span class="nav-icon">▦</span><span>Timetable</span></a>
+        <a class="nav-link" href="#attendance"><span class="nav-icon">◉</span><span>Attendance</span></a>
+        <a class="nav-link" href="#results"><span class="nav-icon">⌁</span><span>Results</span></a>
+        <p class="nav-caption nav-caption-spaced">Personal</p>
+        <a class="nav-link" href="#announcements"><span class="nav-icon">▧</span><span>Announcements</span><span class="nav-count" id="unread-count">2</span></a>
+        <a class="nav-link" href="#profile"><span class="nav-icon">◌</span><span>My Profile</span></a>
+        <a class="nav-link" href="#settings"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="semester-chip"><span class="live-dot"></span><span><small>CURRENT TERM</small><strong>Semester 01 · 2026–27</strong></span></div>
+        <a class="student-mini" href="#profile"><span class="avatar avatar-small">AM</span><span class="student-mini-text"><strong>Alex Morgan</strong><small>First year student</small></span><span class="mini-more">···</span></a>
+      </div>
+    </aside>
+
+    <main class="main-area" id="main-content">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><span></span><span></span></button><div class="breadcrumb"><span>Workspace</span><span class="crumb-sep">/</span><strong id="current-section">Overview</strong></div></div>
+        <div class="topbar-actions">
+          <label class="search-box"><span class="search-symbol" aria-hidden="true">⌕</span><span class="visually-hidden">Search dashboard</span><input id="site-search" type="search" placeholder="Search anything…" autocomplete="off"><kbd>⌘ K</kbd></label>
+          <div class="notification-wrap"><button class="icon-button notification-button" id="notification-toggle" type="button" aria-label="Open notifications" aria-expanded="false" aria-controls="notification-menu"><span class="bell" aria-hidden="true">♧</span><span class="notification-dot"></span></button><div class="notification-menu" id="notification-menu" hidden><div class="menu-heading"><strong>Notifications</strong><span>2 unread</span></div><a href="#announcements" class="notification-item"><i></i><span><strong>Project submission</strong><small>Due tomorrow · Web Development</small></span></a><a href="#announcements" class="notification-item"><i class="sage-dot"></i><span><strong>Exam schedule posted</strong><small>Semester 01 · 2 hours ago</small></span></a><a class="menu-footer" href="#announcements">View all updates</a></div></div>
+          <span class="topbar-divider"></span><a class="topbar-profile" href="#profile" aria-label="View Alex Morgan's profile"><span class="avatar">AM</span></a>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="hero-section page-section" id="overview" aria-labelledby="welcome-title">
+          <div class="hero-top"><div><p class="eyebrow"><span class="eyebrow-line"></span> Academic workspace <span class="eyebrow-slash">/</span> 2026–27</p><h1 id="welcome-title">Good morning, <span>Alex.</span></h1><p class="hero-subtitle">Your schedule, results, and next steps are here.</p></div><div class="date-block"><span class="date-icon">◷</span><span><strong>MONDAY, 23 NOVEMBER 2026</strong><small>SEMESTER 01 / ACADEMIC YEAR 2026–27</small></span></div></div>
+          <div class="hero-divider"></div>
+          <div class="metric-grid" aria-label="Academic summary">
+            <article class="metric metric-primary"><div class="metric-label">Overall attendance <span class="metric-glyph">◉</span></div><div class="metric-value">86.4<span>%</span></div><div class="metric-foot"><span class="status-mark">↑</span> <span>On track</span><span class="metric-note">· 2.4% above requirement</span></div><div class="metric-track"><span style="width:86.4%"></span></div></article>
+            <article class="metric"><div class="metric-label">Current GPA <span class="metric-glyph">✳</span></div><div class="metric-value">8.6<span class="metric-denom"> / 10</span></div><div class="metric-foot"><span class="gold-mark">✦</span><span>Strong standing</span><span class="metric-note">· Semester 01</span></div></article>
+            <article class="metric"><div class="metric-label">Assignments completed <span class="metric-glyph">✓</span></div><div class="metric-value">18<span class="metric-denom"> / 24</span></div><div class="metric-foot"><span>6 tasks to go</span><span class="metric-note">· 75% complete</span></div></article>
+            <article class="metric"><div class="metric-label">Enrolled subjects <span class="metric-glyph">▤</span></div><div class="metric-value">05</div><div class="metric-foot"><span>Across 4 disciplines</span><span class="metric-note">· First semester</span></div></article>
+          </div>
+        </section>
+
+        <section class="content-section page-section" id="results" aria-labelledby="performance-title">
+          <div class="section-heading"><div><p class="section-kicker">01 <span>·</span> RESULTS</p><h2 id="performance-title">Academic performance.</h2><p>Scores across all five subjects.</p></div><a class="text-link" href="#courses">View all results <span>↗</span></a></div>
+          <div class="performance-panel panel"><div class="panel-topline"><div><strong>Assessment index</strong><span class="panel-sub">Semester 01 · 5 subjects</span></div><div class="legend"><span><i class="legend-forest"></i>Overall score</span><span><i class="legend-gold"></i>Grade A or above</span></div></div><div class="score-rows" role="img" aria-label="Horizontal subject score index: Web Development 88 percent, Mathematics 82 percent, Data Structures 79 percent, Statistics 85 percent, Communication Skills 91 percent.">
+            <div class="score-row"><span class="score-subject"><strong>Web Development</strong><small>Internal 46/50 · End term 42/50</small></span><div class="score-track"><span style="width:88%"></span></div><strong class="score-number gold-text">88</strong><span class="score-percent">88%</span><span class="grade-pill">A</span></div>
+            <div class="score-row"><span class="score-subject"><strong>Mathematics</strong><small>Internal 43/50 · End term 39/50</small></span><div class="score-track"><span style="width:82%"></span></div><strong class="score-number">82</strong><span class="score-percent">82%</span><span class="grade-pill">A</span></div>
+            <div class="score-row"><span class="score-subject"><strong>Data Structures</strong><small>Internal 41/50 · End term 38/50</small></span><div class="score-track"><span style="width:79%"></span></div><strong class="score-number">79</strong><span class="score-percent">79%</span><span class="grade-pill grade-b">B+</span></div>
+            <div class="score-row"><span class="score-subject"><strong>Statistics</strong><small>Internal 45/50 · End term 40/50</small></span><div class="score-track"><span style="width:85%"></span></div><strong class="score-number gold-text">85</strong><span class="score-percent">85%</span><span class="grade-pill">A</span></div>
+            <div class="score-row"><span class="score-subject"><strong>Communication Skills</strong><small>Internal 47/50 · End term 44/50</small></span><div class="score-track"><span style="width:91%"></span></div><strong class="score-number gold-text">91</strong><span class="score-percent">91%</span><span class="grade-pill">A+</span></div>
+          </div><div class="score-foot"><span>ASSESSMENT SCALE</span><span>0</span><div class="scale-line"></div><span>100</span><span class="assessment-note">Internal + end term</span></div></div>
+          <div class="result-details"><div class="result-detail"><span class="detail-mark">01</span><span><small>HIGHEST RESULT</small><strong>Communication Skills</strong></span><b>91 <small>/ 100</small></b></div><div class="result-detail"><span class="detail-mark">02</span><span><small>SEMESTER AVERAGE</small><strong>Across all subjects</strong></span><b>85 <small>/ 100</small></b></div><div class="result-detail"><span class="detail-mark">03</span><span><small>ASSESSMENTS</small><strong>Completed this term</strong></span><b>10 <small>of 10</small></b></div></div>
+        </section>
+
+        <section class="content-section page-section" id="timetable" aria-labelledby="schedule-title">
+          <div class="section-heading"><div><p class="section-kicker">02 <span>·</span> YOUR WEEK</p><h2 id="schedule-title">Your weekly schedule.</h2><p>Classes for the week of 23 November.</p></div><span class="section-meta">WEEK 48 <span class="meta-dot"></span> 23—27 NOV</span></div>
+          <div class="schedule-panel panel"><div class="day-tabs" role="tablist" aria-label="Choose a timetable day"><button class="day-tab selected" type="button" role="tab" id="day-mon" aria-selected="true" data-day="monday">Monday<span>23</span></button><button class="day-tab" type="button" role="tab" id="day-tue" aria-selected="false" data-day="tuesday">Tuesday<span>24</span></button><button class="day-tab" type="button" role="tab" id="day-wed" aria-selected="false" data-day="wednesday">Wednesday<span>25</span></button><button class="day-tab" type="button" role="tab" id="day-thu" aria-selected="false" data-day="thursday">Thursday<span>26</span></button><button class="day-tab" type="button" role="tab" id="day-fri" aria-selected="false" data-day="friday">Friday<span>27</span></button></div><div class="schedule-head"><span>TIME</span><span>SESSION</span><span>LOCATION</span></div><div class="schedule-list" id="schedule-list" role="tabpanel" aria-labelledby="day-mon"></div><div class="schedule-bottom"><span class="today-indicator"><i></i> <span id="selected-day-label">Monday</span>, <span id="selected-date-label">23 November</span></span><span>4 sessions <b>·</b> 4 hours</span></div></div>
+        </section>
+
+        <section class="content-section page-section" id="attendance" aria-labelledby="attendance-title">
+          <div class="section-heading"><div><p class="section-kicker">03 <span>·</span> ATTENDANCE</p><h2 id="attendance-title">Attendance overview.</h2><p>Attendance by subject and total class count.</p></div><span class="section-meta">UPDATED TODAY <span class="meta-dot"></span></span></div>
+          <div class="attendance-grid"><div class="attendance-main panel"><div class="attendance-ring" role="img" aria-label="Overall attendance 86.4 percent"><svg viewBox="0 0 160 160" aria-hidden="true"><circle class="ring-track" cx="80" cy="80" r="68"/><circle class="ring-value" cx="80" cy="80" r="68"/></svg><div class="ring-copy"><strong>86.4<span>%</span></strong><small>OVERALL</small></div></div><div class="attendance-summary"><p class="section-kicker">GOOD STANDING</p><h3>Your attendance is<br>2.4 points above<br>the requirement.</h3><p>The course requirement is 84%.</p><div class="class-counts"><div><strong>108</strong><span>Classes attended</span></div><i></i><div><strong>17</strong><span>Classes missed</span></div></div></div><div class="attendance-subjects"><div class="mini-panel-title"><strong>By subject</strong><span>ATTENDANCE</span></div><div class="attendance-row"><span>Web Development</span><div class="mini-track"><i style="width:90%"></i></div><b>90%</b></div><div class="attendance-row"><span>Mathematics</span><div class="mini-track"><i style="width:84%"></i></div><b>84%</b></div><div class="attendance-row"><span>Data Structures</span><div class="mini-track"><i style="width:88%"></i></div><b>88%</b></div><div class="attendance-row"><span>Statistics</span><div class="mini-track"><i style="width:82%"></i></div><b>82%</b></div><div class="attendance-row"><span>Communication Skills</span><div class="mini-track"><i style="width:88%"></i></div><b>88%</b></div><div class="average-note"><span>Subject average</span><strong>86.4%</strong></div></div></div>
+            <div class="calendar-panel panel"><div class="calendar-head"><div><strong>November 2026</strong><small>ATTENDANCE CALENDAR</small></div></div><div class="calendar-grid" aria-label="November attendance: green indicates attended, gold indicates a missed class"><span class="calendar-day-name">M</span><span class="calendar-day-name">T</span><span class="calendar-day-name">W</span><span class="calendar-day-name">T</span><span class="calendar-day-name">F</span><span class="calendar-day-name">S</span><span class="calendar-day-name">S</span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span>
+            <span class="cal-day weekend">1</span><span class="cal-day attended">2</span><span class="cal-day attended">3</span><span class="cal-day attended">4</span><span class="cal-day attended">5</span><span class="cal-day attended">6</span><span class="cal-day weekend">7</span><span class="cal-day weekend">8</span><span class="cal-day attended">9</span><span class="cal-day missed">10</span><span class="cal-day attended">11</span><span class="cal-day attended">12</span><span class="cal-day attended">13</span><span class="cal-day weekend">14</span><span class="cal-day weekend">15</span><span class="cal-day attended">16</span><span class="cal-day attended">17</span><span class="cal-day attended">18</span><span class="cal-day missed">19</span><span class="cal-day attended">20</span><span class="cal-day weekend">21</span><span class="cal-day weekend">22</span><span class="cal-day current-day attended">23</span><span class="cal-day future">24</span><span class="cal-day future">25</span><span class="cal-day future">26</span><span class="cal-day future">27</span><span class="cal-day weekend">28</span><span class="cal-day weekend">29</span><span class="cal-day future">30</span></div><div class="calendar-legend"><span><i class="attended-key"></i>Attended</span><span><i class="missed-key"></i>Missed</span><span><i class="future-key"></i>Upcoming</span></div></div></div>
+        </section>
+
+        <section class="content-section page-section" id="courses" aria-labelledby="courses-title">
+          <div class="section-heading"><div><p class="section-kicker">04 <span>—</span> COURSEWORK</p><h2 id="courses-title">Your learning space.</h2><p>Five subjects, one clear view of your progress.</p></div><span class="section-meta">5 ACTIVE COURSES</span></div>
+          <div class="courses-list">
+            <article class="course-row" data-searchable><span class="course-code">01</span><span class="course-icon course-icon-green">&lt;/&gt;</span><span class="course-info"><strong>Web Development</strong><small>HTML, CSS and frontend development.</small></span><span class="course-progress"><span class="course-track"><i style="width:78%"></i></span><small>78% complete</small></span><span class="course-end">↗</span></article>
+            <article class="course-row" data-searchable><span class="course-code">02</span><span class="course-icon course-icon-gold">∑</span><span class="course-info"><strong>Mathematics</strong><small>Mathematical foundations and problem solving.</small></span><span class="course-progress"><span class="course-track"><i style="width:72%"></i></span><small>72% complete</small></span><span class="course-end">↗</span></article>
+            <article class="course-row" data-searchable><span class="course-code">03</span><span class="course-icon course-icon-sage">⌘</span><span class="course-info"><strong>Data Structures</strong><small>Algorithms and data organisation.</small></span><span class="course-progress"><span class="course-track"><i style="width:64%"></i></span><small>64% complete</small></span><span class="course-end">↗</span></article>
+            <article class="course-row" data-searchable><span class="course-code">04</span><span class="course-icon course-icon-stone">◌</span><span class="course-info"><strong>Statistics</strong><small>Statistical methods and data analysis.</small></span><span class="course-progress"><span class="course-track"><i style="width:83%"></i></span><small>83% complete</small></span><span class="course-end">↗</span></article>
+            <article class="course-row" data-searchable><span class="course-code">05</span><span class="course-icon course-icon-green">Aa</span><span class="course-info"><strong>Communication Skills</strong><small>Professional communication and presentation.</small></span><span class="course-progress"><span class="course-track"><i style="width:90%"></i></span><small>90% complete</small></span><span class="course-end">↗</span></article>
+          </div>
+        </section>
+
+        <section class="content-section page-section two-column-section" id="announcements" aria-labelledby="announcements-title">
+          <div class="announcements-column"><div class="section-heading compact-heading"><div><p class="section-kicker">05 <span>—</span> THE LATEST</p><h2 id="announcements-title">Campus updates.</h2><p>Important notes from around campus.</p></div></div><div class="announcement-list">
+            <article class="announcement unread" data-searchable><div class="announcement-top"><span class="announcement-category category-important">ACADEMIC <i>· IMPORTANT</i></span><span class="unread-label"><i></i>UNREAD</span></div><h3>Web Development Project Submission</h3><p>Submit your HTML and CSS project before 24 November 2026, 11:59 PM.</p><div class="announcement-bottom"><span>23 NOVEMBER 2026</span><button class="read-toggle" type="button" aria-pressed="false">Mark as read</button></div></article>
+            <article class="announcement unread" data-searchable><div class="announcement-top"><span class="announcement-category">EXAMINATION</span><span class="unread-label"><i></i>UNREAD</span></div><h3>Semester Examination Schedule</h3><p>The proposed examination timetable is available for review.</p><div class="announcement-bottom"><span>21 NOVEMBER 2026</span><button class="read-toggle" type="button" aria-pressed="false">Mark as read</button></div></article>
+            <article class="announcement" data-searchable><div class="announcement-top"><span class="announcement-category">CAMPUS</span><span class="read-label">READ</span></div><h3>Annual Technology Festival</h3><p>Registration is open for technical workshops and student competitions.</p><div class="announcement-bottom"><span>18 NOVEMBER 2026</span><button class="read-toggle" type="button" aria-pressed="true">Mark as unread</button></div></article>
+          </div></div>
+          <aside class="tasks-column" aria-labelledby="tasks-title"><div class="tasks-heading"><div><p class="section-kicker">YOUR FOCUS</p><h2 id="tasks-title">Upcoming tasks.</h2></div><span class="task-count">04</span></div><div class="task-list">
+            <article class="task-item" data-searchable><span class="task-check task-priority"></span><span class="task-copy"><strong>Complete Web Development mini project</strong><small>WEB DEVELOPMENT</small></span><time datetime="2026-11-24">24 Nov</time></article>
+            <article class="task-item" data-searchable><span class="task-check"></span><span class="task-copy"><strong>Review Mathematics assignment</strong><small>MATHEMATICS</small></span><time datetime="2026-11-26">26 Nov</time></article>
+            <article class="task-item" data-searchable><span class="task-check"></span><span class="task-copy"><strong>Prepare Data Structures lab record</strong><small>DATA STRUCTURES</small></span><time datetime="2026-11-28">28 Nov</time></article>
+            <article class="task-item" data-searchable><span class="task-check"></span><span class="task-copy"><strong>Submit Statistics worksheet</strong><small>STATISTICS</small></span><time datetime="2026-11-30">30 Nov</time></article>
+          </div><a class="task-footer" href="#courses">Four items to plan <span>→</span></a></aside>
+        </section>
+
+        <section class="content-section page-section profile-section" id="profile" aria-labelledby="profile-title">
+          <div class="section-heading"><div><p class="section-kicker">06 <span>—</span> STUDENT RECORD</p><h2 id="profile-title">Your profile.</h2><p>A little about the student behind the progress.</p></div><span class="demo-badge">DEMONSTRATION PROFILE</span></div>
+          <div class="profile-card panel"><div class="profile-identity"><span class="avatar avatar-large">AM</span><div><h3>Alex Morgan</h3><p>First Year · Bachelor of Technology</p><span class="profile-id">STUDENT ID <b>STU-2026-0142</b></span></div></div><div class="profile-facts"><div><small>PROGRAMME</small><strong>Bachelor of Technology</strong></div><div><small>DEPARTMENT</small><strong>Computer Science</strong></div><div><small>YEAR &amp; SEMESTER</small><strong>First Year · Semester 01</strong></div><div><small>ACCOUNT</small><strong><i class="account-dot"></i>Active student account</strong></div></div></div>
+        </section>
+        <section class="content-section settings-stub" id="settings" aria-label="Settings"><span class="section-kicker">PREFERENCES</span><span>Settings are part of this demonstration dashboard.</span><a href="#overview">Back to overview ↑</a></section>
+        <footer class="page-footer"><a class="footer-brand" href="#overview">STUDENT <em>OS</em></a><span>YOUR ACADEMIC LIFE. IN ONE PLACE.</span><span>DEMONSTRATION DATA · 2026–27</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="search-feedback" id="search-feedback" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
